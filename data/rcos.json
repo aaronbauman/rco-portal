@@ -146,7 +146,7 @@
       "width": 4,
       "height": 4,
       "vizwit": {
-        "title": "Median Market Value",
+        "title": "Median Assessment Value",
         "chartType": "callout",
         "provider": "carto",
         "domain": "phl.carto.com",
