@@ -9,7 +9,7 @@
       "x": 0,
       "y": 0,
       "width": 6,
-      "height": 8,
+      "height": 12,
       "vizwit": {
         "title": "RCO Boundaries",
         "provider": "carto",
@@ -48,7 +48,22 @@
         "domain": "phl.carto.com",
         "dataset": "opa_properties_public",
         "chartType": "pie",
-        "groupBy": "CASE homestead_exemption in (0, null) WHEN true THEN 'No Exemption' ELSE 'Full or Partially Exempt' END"
+        "groupBy": "CASE homestead_exemption in (0, null) WHEN true THEN 'No Homestead' ELSE 'Homestead' END"
+      }
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "width": 6,
+      "height": 4,
+      "vizwit": {
+        "title": "Number of Properties by Any Exemption",
+        "description": "Includes LOOP, Veteran's Exemption, 501(c)3, 10 year tax abatement, etc.",
+        "provider": "carto",
+        "domain": "phl.carto.com",
+        "dataset": "opa_properties_public",
+        "chartType": "pie",
+        "groupBy": "CASE WHEN exempt_building in (0, null) THEN CASE  WHEN homestead_exemption in (0, null) THEN 'No Exemptions' ELSE 'Exemptions' END ELSE 'Exemptions' END"
       }
     },
     {
