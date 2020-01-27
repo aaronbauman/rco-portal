@@ -84,6 +84,39 @@
       "width": 12,
       "height": 5,
       "vizwit": {
+        "title": "L+I Permit Refusals and Code Violations",
+        "chartType": "table",
+        "provider": "carto",
+        "domain": "phl.carto.com",
+        "dataset": "li_appeals",
+        "order": "processeddate desc",
+        "baseFilters": [
+          {
+            "field": "applictype",
+            "expression": {
+              "type": "=",
+              "value": "RB_ZBA"
+            }
+          }
+        ],
+        "columnsToHide": [
+          "cartodb_id",
+          "objectid",
+          "the_geom",
+          "the_geom_webmercator",
+          "addresskey",
+          "appeal_key",
+          "geocode_x",
+          "geocode_y"
+        ]
+      }
+    },
+    {
+      "x": 0,
+      "y": 20,
+      "width": 12,
+      "height": 5,
+      "vizwit": {
         "title": "Properties",
         "chartType": "table",
         "provider": "carto",
